@@ -1,0 +1,15 @@
+{
+  "name": "markdown-sequence-diagrams",
+  "main": "./lib/index",
+  "version": "0.0.0",
+  "description": "A plugin for drawing sequence diagrams in Markdown",
+  "keywords": [],
+  "repository": "https://github.com/inkdropapp/markdown-sequence-diagrams",
+  "license": "MIT",
+  "engines": {
+    "inkdrop": ">=2.1.0 <3.0.0"
+  },
+  "dependencies": {
+    "js-sequence-diagrams": "github:sergeyt/js-sequence-diagrams#modularity"
+  }
+}
