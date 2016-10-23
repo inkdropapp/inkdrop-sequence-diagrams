@@ -18,4 +18,4 @@ ipm install sequence-diagrams
 
 It will be rendered as:
 
-![](https://github.com/inkdropapp/inkdrop-markdown-sequence-diagrams/raw/master/docs/images/example-01.png)
+![](https://github.com/inkdropapp/inkdrop-sequence-diagrams/raw/master/docs/images/example-01.png)
