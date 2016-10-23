@@ -5,7 +5,7 @@ A plugin for drawing flowchart using [js-sequence-diagrams](https://bramp.github
 ## Install
 
 ```shell
-ipm install markdown-sequence-diagrams
+ipm install sequence-diagrams
 ```
 
 ## Usage
