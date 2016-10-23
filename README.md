@@ -1,4 +1,4 @@
-# markdown-sequence-diagrams
+# sequence-diagrams
 
 A plugin for drawing flowchart using [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/) in Markdown code block.
 
