@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "A plugin for drawing sequence diagrams in Markdown",
   "keywords": [],
-  "repository": "https://github.com/inkdropapp/sequence-diagrams",
+  "repository": "https://github.com/inkdropapp/inkdrop-sequence-diagrams",
   "license": "MIT",
   "engines": {
     "inkdrop": ">=2.1.0 <3.0.0"
