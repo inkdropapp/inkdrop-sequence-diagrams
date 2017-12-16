@@ -1,5 +1,3 @@
-'use babel'
-
 import { React } from 'inkdrop'
 import sd from 'js-sequence-diagrams'
 
