@@ -1,33 +1,69 @@
 import { React } from 'inkdrop'
-import sd from 'js-sequence-diagrams'
+import PropTypes from 'prop-types'
+import SequenceDiagram from 'react-sequence-diagram'
 
 class Diagram extends React.Component {
-  componentDidMount () {
-    this.renderDiagram()
+  static propTypes = {
+    children: PropTypes.node
   }
-  componentDidUpdate () {
-    this.renderDiagram()
+  constructor(props) {
+    super(props)
+    this.state = { error: null }
   }
-  render () {
-    return <div ref='canvas' />
+  componentDidMount() {
+    this.updateSVG()
   }
-  renderDiagram () {
+  componentDidUpdate() {
+    this.updateSVG()
+  }
+  render() {
+    const { error } = this.state
     const code = this.props.children[0]
-    const diagram = sd.parse(code)
-    this.refs.canvas.innerHTML = ''
-    diagram.drawSVG(this.refs.canvas, { theme: 'simple' })
+    const options = { theme: 'simple' }
+    if (error) {
+      return (
+        <div className="ui error message">
+          <div className="header">Failed to render the sequence diagram</div>
+          <p>{error.text}</p>
+        </div>
+      )
+    } else {
+      return (
+        <div className="sequence-diagram" ref={el => (this.container = el)}>
+          <SequenceDiagram
+            input={code}
+            options={options}
+            onError={this.handleError}
+          />
+        </div>
+      )
+    }
+  }
+  updateSVG() {
+    if (this.container) {
+      const svg = this.container.querySelector('svg')
+      if (svg) {
+        const w = svg.getAttribute('width')
+        const h = svg.getAttribute('height')
+        svg.setAttribute('viewBox', `0 0 ${w} ${h}`)
+        svg.setAttribute('preserveAspectRatio', 'xMidYMid meet')
+      }
+    }
+  }
+  handleError = e => {
+    this.setState({ error: e })
   }
 }
 
 module.exports = {
-  activate () {
+  activate() {
     const { MDEPreview } = inkdrop.components.classes
     if (MDEPreview) {
       MDEPreview.remarkCodeComponents['sequence'] = Diagram
     }
   },
 
-  deactivate () {
+  deactivate() {
     const { MDEPreview } = inkdrop.components.classes
     if (MDEPreview) {
       MDEPreview.remarkCodeComponents.flowchart = null
