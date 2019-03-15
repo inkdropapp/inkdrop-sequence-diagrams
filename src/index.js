@@ -1,8 +1,9 @@
-import { React } from 'inkdrop'
+import * as React from 'react'
 import PropTypes from 'prop-types'
 import SequenceDiagram from 'react-sequence-diagram'
+import { markdownRenderer } from 'inkdrop'
 
-class Diagram extends React.Component {
+class Diagram extends React.PureComponent {
   static propTypes = {
     children: PropTypes.node
   }
@@ -57,16 +58,14 @@ class Diagram extends React.Component {
 
 module.exports = {
   activate() {
-    const { MDEPreview } = inkdrop.components.classes
-    if (MDEPreview) {
-      MDEPreview.remarkCodeComponents['sequence'] = Diagram
+    if (markdownRenderer) {
+      markdownRenderer.remarkCodeComponents['sequence'] = Diagram
     }
   },
 
   deactivate() {
-    const { MDEPreview } = inkdrop.components.classes
-    if (MDEPreview) {
-      MDEPreview.remarkCodeComponents.flowchart = null
+    if (markdownRenderer) {
+      delete markdownRenderer.remarkCodeComponents.sequence
     }
   }
 }
