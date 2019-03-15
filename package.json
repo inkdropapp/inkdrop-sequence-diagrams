@@ -1,7 +1,7 @@
 {
   "name": "sequence-diagrams",
   "main": "./lib/index",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A plugin for drawing sequence diagrams in Markdown",
   "keywords": [],
   "repository": "https://github.com/inkdropapp/inkdrop-sequence-diagrams",
