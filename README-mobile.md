@@ -1,12 +1,4 @@
-# sequence-diagrams
-
 Allows you to draw sequence diagrams using [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/) in Markdown code block.
-
-## Install
-
-```shell
-ipm install sequence-diagrams
-```
 
 ## Usage
 
