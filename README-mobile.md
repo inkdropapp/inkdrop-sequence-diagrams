@@ -14,13 +14,13 @@ It will be rendered as:
 
 ## Changelog
 
-### 0.2.1 (2020-02-06)
+### 2.0.1 (2020-02-06)
 
 - fix(diagram): Clear error when updating code (Thanks Peilun)
 
-### 0.2.0
+### 1.0.0
 
-- feat(print): Scale diagram to fit the paper size when printing (Thanks @zainul)
+- feat(\*): Support Inkdrop 4.x
 
 ### 0.1.2
 
