@@ -14,6 +14,10 @@ It will be rendered as:
 
 ## Changelog
 
+### 2.0.2 (2020-02-06)
+
+- fix(preview): Lighter background color for dark UI themes (Thanks [Peilun](https://forum.inkdrop.app/t/low-visibility-of-sequence-diagram-when-using-with-dark-ui-theme/1754))
+
 ### 2.0.1 (2020-02-06)
 
 - fix(diagram): Clear error when updating code (Thanks Peilun)
