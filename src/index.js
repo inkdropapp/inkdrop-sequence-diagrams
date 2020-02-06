@@ -14,7 +14,12 @@ class Diagram extends React.PureComponent {
   componentDidMount() {
     this.updateSVG()
   }
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
+    const code = this.props.children[0]
+    const prevCode = prevProps.children[0]
+    if (code !== prevCode) {
+      this.setState({error: null})
+    }
     this.updateSVG()
   }
   render() {
