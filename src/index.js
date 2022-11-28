@@ -1,12 +1,8 @@
 import * as React from 'react'
-import PropTypes from 'prop-types'
 import SequenceDiagram from 'react-sequence-diagram'
 import { markdownRenderer } from 'inkdrop'
 
 class Diagram extends React.PureComponent {
-  static propTypes = {
-    children: PropTypes.node
-  }
   constructor(props) {
     super(props)
     this.state = { error: null }
@@ -18,7 +14,7 @@ class Diagram extends React.PureComponent {
     const code = this.props.children[0]
     const prevCode = prevProps.children[0]
     if (code !== prevCode) {
-      this.setState({error: null})
+      this.setState({ error: null })
     }
     this.updateSVG()
   }
