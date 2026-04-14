@@ -1,5 +1,8 @@
 # sequence-diagrams
 
+> [!WARNING]
+> This plugin has been deprecated in favor of [mermaid](https://my.inkdrop.app/plugins/mermaid)
+
 Allows you to draw sequence diagrams using [js-sequence-diagrams](https://bramp.github.io/js-sequence-diagrams/) in Markdown code block.
 
 ## Install
